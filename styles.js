@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     padding: 40,
     marginTop: 40,
   },
-  title: {
+  subHeading: {
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 20,
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     marginBottom: 7,
-    color: "green",
+    color: "orange",
   },
   input: {
     borderWidth: 3,
@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     fontSize: 18,
   },
-  addButton: {
-    backgroundColor: "green",
+  add: {
+    backgroundColor: "blue",
     padding: 10,
     borderRadius: 5,
     marginBottom: 10,
@@ -50,13 +50,13 @@ const styles = StyleSheet.create({
   taskButtons: {
     flexDirection: "row",
   },
-  editButton: {
+  edit: {
     marginRight: 10,
     color: "green",
     fontWeight: "bold",
     fontSize: 18,
   },
-  deleteButton: {
+  delete: {
     color: "red",
     fontWeight: "bold",
     fontSize: 18,

@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import styles from "./styles";
 
 export default function App() {
   const [task, setTask] = useState("");
@@ -41,27 +42,27 @@ export default function App() {
       <Text style={styles.itemList}>{item}</Text>
       <View style={styles.taskButtons}>
         <TouchableOpacity onPress={() => handleEditTask(index)}>
-          <Text style={styles.editButton}>Edit</Text>
+          <Text style={styles.edit}>Edit</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => handleDeleteTask(index)}>
-          <Text style={styles.deleteButton}>Delete</Text>
+          <Text style={styles.delete}>Delete</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Chris Warren's</Text>
-      <Text style={styles.title}>ToDo App</Text>
+      <Text style={styles.heading}>ToDo App</Text>
+      <Text style={styles.subHeading}>By: Chris Warren</Text>
       <TextInput
         style={styles.input}
-        placeholder="Enter task"
+        placeholder="Task..."
         value={task}
         onChangeText={(text) => setTask(text)}
       />
-      <TouchableOpacity style={styles.addButton} onPress={handleAddTask}>
+      <TouchableOpacity style={styles.add} onPress={handleAddTask}>
         <Text style={styles.addButtonText}>
-          {editIndex !== -1 ? "Update Task" : "Add Task"}
+          {editIndex !== -1 ? "Update" : "Add"}
         </Text>
       </TouchableOpacity>
       <FlatList
