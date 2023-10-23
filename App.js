@@ -15,13 +15,13 @@ export default function App() {
   const handleAddTask = () => {
     if (task) {
       if (editIndex !== -1) {
-        // Edit existing task
+        // Edit task
         const updatedTasks = [...tasks];
         updatedTasks[editIndex] = task;
         setTasks(updatedTasks);
         setEditIndex(-1);
       } else {
-        // Add new task
+        // Add task
         setTasks([...tasks, task]);
       }
       setTask("");
